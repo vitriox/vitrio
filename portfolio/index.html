@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="pl" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio – Vitrio</title>
+  <meta name="description" content="Vitrio: wizualizacje 3D, wirtualne spacery 360°, ujęcia dronem, fotografia nieruchomości, rzuty 3D." />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap">
+</head>
+<body>
+  <div class="progress" aria-hidden="true"></div>
+
+  <header class="header" role="banner">
+    <div class="container header-inner">
+      <a href="" class="logo-link" aria-label="Vitrio – strona główna">
+        <img src="/assets/img/logo-vitrio.svg" alt="Vitrio" decoding="async" class="vitrio" />
+      </a>
+      <nav id="menu" class="nav" aria-label="Główna">
+        <a href="/oferta/" class="pc" >Oferta</a>
+        <a href="/oferta/" class="mobile"><i class="fa-regular fa-envelope"></i></a>
+        <a href="/portfolio/" class="pc" >Portfolio</a>
+        <a href="/case-studies/" class="pc">Case studies</a>
+        <a href="/proces/" class="pc">Proces</a>
+        <a href="/cennik/" class=pc>Cennik</a>
+        <a href="/o-nas/" class="pc">O nas</a>
+        <a href="/blog/" class="pc">Blog</a>
+        <a href="/kontakt/" class="btn secondary pc" >Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+  <nav class="container section-sm breadcrumbs"><a href="../index.html">Start</a> / Portfolio</nav>
+
+  <section class="container section">
+    <h1>Portfolio</h1>
+
+    <!-- Filtry -->
+    <div class="filters">
+      <button class="btn active" data-filter="all">Wszystko</button>
+      <button class="btn" data-filter="viz">Wizualizacje</button>
+      <button class="btn" data-filter="vr">Wirtualne Spacery</button>
+      <button class="btn" data-filter="dron">Drony</button>
+      <button class="btn" data-filter="foto">Fotografia</button>
+      <button class="btn" data-filter="rzuty-3d">Rzuty 3D</button>
+    </div>
+
+    <!-- WIZUALIZACJE -->
+    <section class="portfolio-section" data-section="viz">
+      <h2 id="viz" style="margin-top:24px">Wizualizacje 3D</h2>
+      <div class="portfolio-masonry">
+        <figure class="item portfolio-item" data-tags="viz">
+          <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop" alt="Wizualizacja 1">
+        </figure>
+        
+      </div>
+    </section>
+
+   <!-- WIRTUALNE SPACERY — UKŁAD 2 STAŁE KOLUMNY (NIE MIESZA KOLEJNOŚCI) -->
+<section class="portfolio-section" data-section="vr">
+  <h2 id="vr" style="margin-top:24px">Wirtualne Spacery</h2>
+
+  <div class="vr-columns">
+    <!-- LEWA KOLUMNA: 1) Wrocław, 2) Namysłów (3 spacery) -->
+    <div class="vr-col vr-col-left">
+
+      <!-- WROCŁAW -->
+      <article id="vr-wroclaw" class="card portfolio-item" data-tags="vr">
+        <h3>To mieszkanie we Wrocławiu sprzedało się od razu!</h3>
+        <p class="muted">
+          Agencja nieruchomości ponad miesiąc szukała nabywcy mieszkania, potencjalni klienci decydowali się jednak na inne lokale.
+          Dopiero wirtualny spacer zdecydowanie poszerzył zasięgi oferty i drugiego dnia po publikacji projektu mieszkanie znalazło nowych lokatorów.
+        </p>
+        <div class="ratio-16x9">
+          <iframe
+            title="Wrocław – mieszkanie (Matterport)"
+            src="https://my.matterport.com/show/?m=qYMZDQbDN3s"
+            allow="autoplay; fullscreen; web-share; xr-spatial-tracking"
+            allowfullscreen></iframe>
+        </div>
+      </article>
+
+      <!-- NAMYSŁÓW (3 spacery Matterport) -->
+      <article id="vr-namyslow" class="card portfolio-item" data-tags="vr">
+        <h3>Namysłów — mieszkania do wynajęcia</h3>
+        <p class="muted">
+          Doskonale urządzone, przytulne mieszkania do wynajęcia w Namysłowie. Świetna lokalizacja!
+          Idealne miejsca do wypraw na Opolszczyznę i Dolny Śląsk. Blisko do renomowanej stajni i hali jeździeckiej.
+          Na gości zawsze czeka „pakiet startowy”.
+        </p>
+
+        <div class="ratio-16x9 mb-12">
+          <iframe
+            title="Namysłów 1 – mieszkanie (Matterport)"
+            src="https://my.matterport.com/show/?m=p3opJEz4mYp"
+            allow="autoplay; fullscreen; web-share; xr-spatial-tracking"
+            allowfullscreen loading="lazy"></iframe>
+        </div>
+
+        <div class="ratio-16x9 mb-12">
+          <iframe
+            title="Namysłów 2 – mieszkanie (Matterport)"
+            src="https://my.matterport.com/show/?m=DHgR86y7Xku"
+            allow="autoplay; fullscreen; web-share; xr-spatial-tracking"
+            allowfullscreen loading="lazy"></iframe>
+        </div>
+
+        <div class="ratio-16x9">
+          <iframe
+            title="Namysłów 3 – mieszkanie (Matterport)"
+            src="https://my.matterport.com/show/?m=SXfH79V8M6p"
+            allow="autoplay; fullscreen; web-share; xr-spatial-tracking"
+            allowfullscreen loading="lazy"></iframe>
+        </div>
+      </article>
+    </div>
+
+    <!-- PRAWA KOLUMNA: 1) Dobra, 2) Kusocińskiego, 3) Kawiarnia (MP + GSV) -->
+    <div class="vr-col vr-col-right">
+
+      <!-- DOBRA -->
+      <article id="vr-dobra" class="card portfolio-item" data-tags="vr">
+        <h3>Dom w podwrocławskiej miejscowości</h3>
+        <p class="muted">
+          W prawie trzystumetrowym, podpiwniczonym domu z tarasem mieszka już nowa rodzina. Właściciele nie korzystali z usług agencji nieruchomości —
+          swoją ofertę z naszym spacerem opublikowali na portalu ogłoszeniowym. Wysoka liczba odsłon przyspieszyła proces sprzedaży.
+        </p>
+        <div class="ratio-16x9">
+          <iframe
+            title="Dobra – dom (Matterport)"
+            src="https://my.matterport.com/show/?m=mcrZZj1W2im"
+            allow="autoplay; fullscreen; web-share; xr-spatial-tracking"
+            allowfullscreen></iframe>
+        </div>
+      </article>
+
+      <!-- KUSOCIŃSKIEGO -->
+      <article id="vr-kusocinskiego" class="card portfolio-item" data-tags="vr">
+        <h3>Dwupoziomowe mieszkanie w stanie deweloperskim</h3>
+        <p class="muted">
+          Wirtualny spacer wykonany w naszej technologii pokazuje rzeczywisty obraz wszystkich pomieszczeń i pozwala zaplanować wykończenie
+          oraz sprawdzić wymiary poszczególnych lokali. Dzięki regularnym realizacjom inwestor może zdalnie oceniać postępy prac
+          i planować kolejne etapy adaptacji.
+        </p>
+        <div class="ratio-16x9">
+          <iframe
+            title="Kusocińskiego – mieszkanie (Matterport)"
+            src="https://my.matterport.com/show/?m=Y5XM7FnZsGH"
+            allow="autoplay; fullscreen; web-share; xr-spatial-tracking"
+            allowfullscreen></iframe>
+        </div>
+      </article>
+
+      <!-- KAWIARNIA (Matterport + Street View) -->
+      <article id="vr-kawiarnia" class="card portfolio-item" data-tags="vr">
+        <h3>A może… wybierzemy się na kawę?</h3>
+        <p class="muted">
+          Spacer po uroczej kawiarni pozwala niemal poczuć zapach świeżo prażonej kawy, ciepłej drożdżówki, wanilii i cynamonu… Czujecie?
+          Taka wirtualna wycieczka to idealna forma promocji lokalu, umożliwiająca wejście do środka bezpośrednio z chodnika w ramach Google Street View :-)
+        </p>
+
+        <!-- Matterport -->
+        <div class="ratio-16x9">
+          <iframe
+            title="Kawiarnia – spacer Matterport"
+            src="https://my.matterport.com/show/?m=7MFs4nkLK5b"
+            allow="autoplay; fullscreen; web-share; xr-spatial-tracking"
+            allowfullscreen></iframe>
+        </div>
+
+        <!-- Street View -->
+        <div class="ratio-16x9 mt-12">
+          <iframe
+            title="Kawiarnia – Google Street View"
+            src="https://www.google.com/maps/embed?pb=!4v1748179774147!6m8!1m7!1sCAoSHENJQUJJaENTTFJfMURuZG5reDMwMDBhSkNPdHM.!2m2!1d51.20938366334324!2d17.37922001094082!3f210.60858758114534!4f-15.09341468087132!5f0.7820865974627469"
+            width="100%" height="100%" style="border:0"
+            allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+
+
+    <!-- DRONY -->
+    <section class="portfolio-section" data-section="dron">
+  <h2 id="dron" style="margin-top:24px">Drony</h2>
+
+  <!-- kontener na kafle generowane z manifestu -->
+  <div id="dron-grid" class="portfolio-masonry"></div>
+
+  <!-- manifest z listą filmów -->
+  <script src="video-drony/videos.js"></script>
+
+  <!-- renderer kafli z manifestu -->
+  <script>
+    (function () {
+      const list = (window.DRON_VIDEOS || []);
+      const grid = document.getElementById('dron-grid');
+
+      if (!grid) return;
+
+      if (!list.length) {
+        grid.innerHTML = '<p class="muted">Brak materiałów wideo — dodaj pliki do <code>portfolio/video-drony/</code> i uzupełnij <code>videos.js</code>.</p>';
+        return;
+      }
+
+      list.forEach(v => {
+        const fig = document.createElement('figure');
+        fig.className = 'item portfolio-item';
+        fig.dataset.tags = 'dron';
+
+        // figcaption (tytuł + opis)
+        const caption = document.createElement('figcaption');
+        caption.innerHTML = `
+          <h3>${v.title || 'Materiał z drona'}</h3>
+          ${v.desc ? `<p class="muted">${v.desc}</p>` : ''}
+        `;
+
+        // video
+        const video = document.createElement('video');
+        video.controls = true;
+        video.preload = 'metadata';
+        video.style.width = '100%';
+        video.style.height = 'auto';
+        if (v.poster) video.setAttribute('poster', 'video-drony/' + v.poster);
+
+        const source = document.createElement('source');
+        source.src = 'video-drony/' + v.file;
+        source.type = 'video/mp4';
+        video.appendChild(source);
+
+        // kolejność: video -> podpis
+        fig.appendChild(video);
+        fig.appendChild(caption);
+        grid.appendChild(fig);
+      });
+    })();
+  </script>
+</section>
+
+
+
+    <!-- FOTOGRAFIA -->
+    <section class="portfolio-section" data-section="foto">
+      <h2 id="foto" style="margin-top:24px">Fotografia nieruchomości</h2>
+      <div class="portfolio-masonry">
+        <figure class="item portfolio-item" data-tags="foto">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop" alt="Fotografia 1">
+        </figure>
+        <figure class="item portfolio-item" data-tags="foto">
+          <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1200&auto=format&fit=crop" alt="Fotografia 2">
+        </figure>
+      </div>
+    </section>
+
+    <!-- RZUTY 3D -->
+    <section class="portfolio-section" data-section="rzuty-3d">
+      <h2 id="rzuty-3d" style="margin-top:24px">Rzuty 3D</h2>
+      <div class="portfolio-masonry">
+        <figure class="item portfolio-item" data-tags="rzuty-3d">
+          <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1200&auto=format&fit=crop" alt="Rzut 3D 1">
+        </figure>
+        <figure class="item portfolio-item" data-tags="rzuty-3d">
+          <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=1200&auto=format&fit=crop" alt="Rzut 3D 2">
+        </figure>
+      </div>
+    </section>
+
+  </section>
+</main>
+
+<script>
+(function() {
+  const buttons  = document.querySelectorAll('.filters [data-filter]');
+  const items    = document.querySelectorAll('.portfolio-item');
+  const sections = document.querySelectorAll('.portfolio-section');
+
+  // Normalizacja hash -> klucz filtra używany w data-filter / data-tags / id sekcji
+  const alias = {
+    'all': 'all', 'wszystko': 'all',
+    'viz': 'viz', 'wizualizacje': 'viz',
+    'vr': 'vr', 'wirtualne-spacery': 'vr', 'spacery': 'vr',
+    'dron': 'dron', 'drony': 'dron',
+    'foto': 'foto', 'fotografia': 'foto',
+    'rzuty-3d': 'rzuty-3d', 'rzuty3d': 'rzuty-3d', 'rzuty 3d': 'rzuty-3d', 'rzuty': 'rzuty-3d'
+  };
+
+  function normalize(tag) {
+    if (!tag) return 'all';
+    const t = String(tag).trim().toLowerCase();
+    return alias[t] || t;
+  }
+
+  function setActive(btn) {
+    buttons.forEach(b => b.classList.toggle('active', b === btn));
+  }
+
+  function filterBy(tagRaw) {
+    const t = normalize(tagRaw);
+
+    // pokaż/ukryj pojedyncze karty
+    items.forEach(el => {
+      const tags = (el.getAttribute('data-tags') || '').toLowerCase().split(/\s*,\s*|\s+/).filter(Boolean);
+      const visible = (t === 'all') || tags.includes(t);
+      el.style.display = visible ? '' : 'none';
+    });
+
+    // pokaż/ukryj całe sekcje wraz z nagłówkami
+    sections.forEach(sec => {
+      const anyVisible = !!sec.querySelector('.portfolio-item:not([style*="display: none"])');
+      sec.style.display = (t === 'all' ? '' : (anyVisible ? '' : 'none'));
+    });
+
+    // aktywuj odpowiedni przycisk
+    const btn = document.querySelector(`.filters [data-filter="${t}"]`) || document.querySelector(`.filters [data-filter="all"]`);
+    if (btn) setActive(btn);
+
+    // przewiń do sekcji (jeśli istnieje nagłówek z id równym kluczowi)
+    const anchor = document.getElementById(t);
+    if (anchor) anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    // ustaw hash w URL
+    if (history.pushState) {
+      const url = new URL(location);
+      url.hash = (t === 'all') ? '' : '#' + t;
+      history.replaceState(null, '', url);
+    } else {
+      location.hash = (t === 'all') ? '' : '#' + t;
+    }
+  }
+
+  // Kliknięcia w filtry
+  buttons.forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      filterBy(btn.getAttribute('data-filter'));
+    });
+  });
+
+  // Start + zmiana hasha
+  function handleHash() { filterBy((location.hash || '').replace('#','')); }
+  window.addEventListener('hashchange', handleHash);
+  document.addEventListener('DOMContentLoaded', handleHash);
+})();
+</script>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div>
+        <img src="assets/img/logo-vitrio.svg" alt="Vitrio" class="vitrio_nb" decoding="async" />
+        <p class="muted">Wizualizacje 3D, VR 360°, dron | „Wirtualnie Blisko”.</p>
+        <small>© <span id="y"></span> Vitrio</small>
+      </div>
+      <nav aria-label="Stopka">
+        <strong>Nawigacja</strong>
+        <ul>
+          <li><a href="/oferta/">Oferta</a></li>
+          <li><a href="/portfolio/">Portfolio</a></li>
+          <li><a href="/kontakt/">Kontakt</a></li>
+          <li><a href="/polityka-prywatnosci/">Polityka prywatności</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>

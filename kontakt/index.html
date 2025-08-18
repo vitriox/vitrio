@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pl" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kontakt – Vitrio</title>
+  <meta name="description" content="Vitrio: wizualizacje 3D, wirtualne spacery 360° (Matterport/Kuula), ujęcia dronem. Slogan: Wirtualnie Blisko." />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap">
+</head>
+<body>
+  <div class="progress" aria-hidden="true"></div>
+
+  <header class="header" role="banner">
+    <div class="container header-inner">
+      <a href="" class="logo-link" aria-label="Vitrio – strona główna">
+        <img src="/assets/img/logo-vitrio.svg" alt="Vitrio" decoding="async" class="vitrio" />
+      </a>
+      <nav id="menu" class="nav" aria-label="Główna">
+        <a href="/oferta/" class="pc" >Oferta</a>
+        <a href="/oferta/" class="mobile"><i class="fa-regular fa-envelope"></i></a>
+        <a href="/portfolio/" class="pc" >Portfolio</a>
+        <a href="/case-studies/" class="pc">Case studies</a>
+        <a href="/proces/" class="pc">Proces</a>
+        <a href="/cennik/" class=pc>Cennik</a>
+        <a href="/o-nas/" class="pc">O nas</a>
+        <a href="/blog/" class="pc">Blog</a>
+        <a href="/kontakt/" class="btn secondary pc" >Kontakt</a>
+      </nav>
+    </div>
+  </header>
+    
+<main id="main">
+
+<nav class="container section-sm breadcrumbs"><a href="/">Start</a> / Kontakt</nav>
+<section class="container section contact-section">
+  <h1>Kontakt</h1>
+  <div class="grid cols-2">
+    <section class="card">
+      <h2>Formularz</h2>
+      <form class="grid" style="gap:12px" action="#" method="get" novalidate>
+        <label class="email-label">E-mail<input class="card karta-email" type="email" name="email" required placeholder="twoj@mail.pl"></label>
+        <label class="telefon-label">Telefon<input class="card karta-telefon" type="tel" required placeholder="+48 123 456 789">
+        <label class="opis-label">Opis projektu<textarea class="card karta-projekt" name="msg" rows="4" placeholder="Tutaj wpisz opis twojego projektu..."></textarea></label>
+        <button class="btn karta-wyslij" type="submit">Wyślij</button>
+      </form>
+      <p class="muted">Wycena zwykle do 24h.</p>
+    </section>
+    <section class="card">
+      <h2>Dane</h2>
+      <ul>
+        <li><a href="tel:+48733736778">+48 733 736 778</a></li>
+        <li><a href="tel:+48570016986">+48 570 016 986</li>
+        <li><a href="mailto:hello@vitrio.pl">hello@vitrio.pl</a></li>
+        <li>Dolny Śląsk · Polska</li>
+      </ul>
+      <div class="ratio-16x9" style="margin-top:8px">
+        <iframe title="Mapa – Vitrio" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=16.9%2C51.0%2C17.1%2C51.2&amp;layer=mapnik"></iframe>
+      </div>
+    </section>
+  </div>
+</section>
+
+</main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div>
+        <img src="assets/img/logo-vitrio.svg" alt="Vitrio" class="vitrio_nb" decoding="async" />
+        <p class="muted">Wizualizacje 3D, VR 360°, dron | „Wirtualnie Blisko”.</p>
+        <small>© <span id="y"></span> Vitrio</small>
+      </div>
+      <nav aria-label="Stopka">
+        <strong>Nawigacja</strong>
+        <ul>
+          <li><a href="/oferta/">Oferta</a></li>
+          <li><a href="/portfolio/">Portfolio</a></li>
+          <li><a href="/kontakt/">Kontakt</a></li>
+          <li><a href="/polityka-prywatnosci/">Polityka prywatności</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+  <script src="../assets/js/components.js" defer></script>
+</body>
+</html>
+    

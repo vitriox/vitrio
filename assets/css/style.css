@@ -483,3 +483,215 @@ a{color:inherit;text-decoration:none}
   transition:opacity .4s ease;
   z-index:1;
 }
+
+<!doctype html>
+<html lang="pl" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vitrio – Wirtualnie Blisko</title>
+  <meta name="description" content="Vitrio: wizualizacje 3D, wirtualne spacery 360° (Matterport/Kuula), ujęcia dronem. Slogan: Wirtualnie Blisko." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <script src="/assets/js/main.js"></script>
+  <div class="progress" aria-hidden="true"></div>
+
+  <header class="header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo-link" aria-label="Vitrio – strona główna">
+        <img src="/assets/img/logo-vitrio.svg" alt="Vitrio" decoding="async" class="vitrio" />
+      </a>
+      <nav id="menu" class="nav" aria-label="Główna">
+        <a href="/oferta/" class="pc">Oferta</a>
+        <a href="/oferta/" class="mobile"><i class="fa-regular fa-envelope"></i></a>
+        <a href="/portfolio/" class="pc">Portfolio</a>
+        <a href="/case-studies/" class="pc">Case studies</a>
+        <a href="/proces/" class="pc">Proces</a>
+        <a href="/cennik/" class="pc">Cennik</a>
+        <a href="/o-nas/" class="pc">O nas</a>
+        <a href="/blog/" class="pc">Blog</a>
+        <a href="/kontakt/" class="btn secondary pc">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="hero container" aria-labelledby="h-slogan">
+      <div>
+        <span class="badge">Wirtualnie Blisko</span>
+        <h1 id="h-slogan">Wizualizacje 3D i wirtualne spacery, które sprzedają nieruchomości szybciej.</h1>
+        <p class="muted">Łączymy fotorealistyczne rendery, spacery 360° (Matterport/Kuula), ujęcia dronem (klasyczny + FPV) oraz przejrzyste rzuty 3D. Skupiamy się na jakości, która realnie zwiększa liczbę zapytań.</p>
+        <div style="display:flex;gap:8px;justify-content:center;margin-top:10px">
+          <a class="btn" href="kontakt/">Umów konsultację</a>
+          <a class="btn secondary" href="portfolio/">Zobacz portfolio</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container services" aria-labelledby="h-services">
+      <h2 id="h-services">Co robimy</h2>
+      <div class="grid cols-4">
+        <article class="card home-card">
+          <a class="card-overlay" href="oferta/wirtualne-spacery/" aria-label="Zobacz ofertę: Wirtualne Spacery"></a>
+          <div class="icon" aria-hidden="true">🖼️</div>
+          <h3>Wirtualne Spacery</h3>
+          <p class="muted">Interaktywne wycieczki 360° – Matterport oraz Kuula. Idealne na stronę, portale ogłoszeniowe i social media.</p>
+          <p><a class="btn ghost" href="oferta/wirtualne-spacery/">Oferta</a></p>
+        </article>
+
+        <article class="card home-card">
+          <a class="card-overlay" href="oferta/wizualizacje/" aria-label="Zobacz ofertę: Wizualizacje 3D"></a>
+          <div class="icon" aria-hidden="true">🏠</div>
+          <h3>Wizualizacje 3D</h3>
+          <p class="muted">Fotorealistyczne ujęcia zewnętrzne i wnętrza. Światło, materiały i kompozycja nastawione na konwersję.</p>
+          <p><a class="btn ghost" href="oferta/wizualizacje/">Oferta</a></p>
+        </article>
+
+        <article class="card home-card">
+          <a class="card-overlay" href="oferta/dron/" aria-label="Zobacz ofertę: Dron / FPV"></a>
+          <div class="icon" aria-hidden="true">🚁</div>
+          <h3>Dron / FPV</h3>
+          <p class="muted">Dynamiczne ujęcia i kontekst lokalizacji. Storytelling w ruchu: klasyczny dron oraz ujęcia FPV.</p>
+          <p><a class="btn ghost" href="oferta/dron/">Oferta</a></p>
+        </article>
+
+        <article class="card home-card">
+          <a class="card-overlay" href="oferta/rzuty-3d/" aria-label="Zobacz ofertę: Rzuty 3D"></a>
+          <div class="icon" aria-hidden="true">📐</div>
+          <h3>Rzuty 3D</h3>
+          <p class="muted">Przejrzyste rzuty i układy funkcjonalne. Pomagają klientom zrozumieć skalę i możliwości aranżacyjne.</p>
+          <p><a class="btn ghost" href="oferta/rzuty-3d/">Oferta</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container" aria-labelledby="h-why">
+      <h2 id="h-why">Dlaczego Vitrio?</h2>
+      <div class="grid cols-3">
+        <article class="card"><div class="kpi">24h</div><p class="muted">Wycena do następnego dnia</p></article>
+        <article class="card"><div class="kpi">98%</div><p class="muted">Klientów poleca nasze materiały</p></article>
+        <article class="card"><div class="kpi">200+</div><p class="muted">Zrealizowanych ujęć i spacerów</p></article>
+      </div>
+    </section>
+
+    <section class="section container" aria-labelledby="h-vr">
+      <h2 id="h-vr">Wirtualny spacer – integracja Kuula</h2>
+      <div class="card">
+        <div class="ratio-16x9">
+          <iframe width="100%" height="100%" frameborder="0"
+            allow="xr-spatial-tracking; gyroscope; accelerometer" allowfullscreen scrolling="no"
+            src="https://kuula.co/share/collection/71kNy?logo=-1&info=0&fs=1&vr=1&sd=1&thumbs=1&inst=pl"></iframe>
+        </div>
+        <p class="muted" style="margin-top:10px">Przykładowe osadzenie spaceru 360° (Kuula). Integrujemy również Matterport dla najwyższej jakości.</p>
+      </div>
+    </section>
+
+    <!-- WIDEO HERO (Vimeo) -->
+    <section class="video-hero" aria-label="Ujęcie dronem">
+      <div class="video-hero__pin">
+        <div class="video-hero__media">
+          <!-- BEZPOŚREDNI SRC -> zero czarnego ekranu -->
+          <iframe
+            id="vimeo-bg"
+            title="Vitrio – wideo tła"
+            src="https://player.vimeo.com/video/1112538147?background=1&autoplay=1&muted=1&loop=1&dnt=1&playsinline=1"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // tylko efekt zmniejszania (iframe ma już src)
+      document.addEventListener("scroll", () => {
+        const scrolled = window.scrollY / window.innerHeight;
+        const scale = Math.max(0.6, 1 - scrolled * 0.25);
+        document.querySelector(".video-hero__media")
+          .style.setProperty("--scale", scale);
+      });
+    </script>
+    <script src="https://player.vimeo.com/api/player.js" defer></script>
+
+    <section class="container section home-portfolio">
+      <header class="flex">
+        <h2>Portfolio</h2>
+        <a class="btn ghost" href="portfolio/">Pełne portfolio →</a>
+      </header>
+
+      <div class="filters">
+        <a class="btn active" href="portfolio/#all">Wszystko</a>
+        <a class="btn" href="portfolio/#viz">Wizualizacje</a>
+        <a class="btn" href="portfolio/#vr">Wirtualne Spacery</a>
+        <a class="btn" href="portfolio/#dron">Drony</a>
+        <a class="btn" href="portfolio/#foto">Fotografia</a>
+        <a class="btn" href="portfolio/#rzuty-3d">Rzuty 3D</a>
+      </div>
+
+      <div class="teaser-grid">
+        <article class="teaser-card">
+          <div class="teaser-media">
+            <img src="assets/img/teaser-1.jpg" alt="">
+          </div>
+          <h3>Wizualizacja osiedla</h3>
+          <p class="muted">Zobacz więcej w portfolio</p>
+        </article>
+
+        <article class="teaser-card">
+          <div class="teaser-media">
+            <iframe src="https://my.matterport.com/show/?m=qYMZDQbDN3s" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <h3>Wirtualny spacer: Wrocław</h3>
+          <p class="muted">Case z szybką sprzedażą</p>
+        </article>
+
+        <article class="teaser-card">
+          <div class="teaser-media">
+            <img src="assets/img/teaser-2.jpg" alt="">
+          </div>
+          <h3>Fotografia wnętrz</h3>
+          <p class="muted">Pakiet pod portale ogłoszeniowe</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container" aria-labelledby="h-cta">
+      <h2 id="h-cta">Wirtualnie Blisko Twoich klientów</h2>
+      <p class="muted">Prześlij rzut/projekt lub link do oferty – w 24h wrócimy z propozycją pakietu i terminem realizacji.</p>
+      <p><a class="btn" href="kontakt/">Umów wycenę</a></p>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div>
+        <img src="assets/img/logo-vitrio.svg" alt="Vitrio" class="vitrio_nb" decoding="async" />
+        <p class="muted">Wizualizacje 3D, VR 360°, dron | „Wirtualnie Blisko”.</p>
+        <small>© <span id="y"></span> Vitrio</small>
+      </div>
+      <nav aria-label="Stopka">
+        <strong>Nawigacja</strong>
+        <ul>
+          <li><a href="oferta/">Oferta</a></li>
+          <li><a href="portfolio/">Portfolio</a></li>
+          <li><a href="kontakt/">Kontakt</a></li>
+          <li><a href="polityka-prywatnosci/">Polityka prywatności</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <button id="scrollToTopBtn" aria-label="Scroll to top"><s>↑</s></button>
+
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+  <script src="assets/js/components.js" defer></script>
+  <script src="assets/js/scroll.js"></script>
+</body>
+</html>

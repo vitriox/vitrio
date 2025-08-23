@@ -120,31 +120,38 @@
   </div>
 </section>
 
+<!-- WIDEO HERO (Vimeo, desktop + mobile) -->
 <section class="video-hero" aria-label="Ujęcie dronem">
   <div class="video-hero__pin">
-  <video id="hero-video" autoplay muted playsinline loop>
-    <source src="/assets/video/onehome-namyslow-ul-olawska.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</div>
+    <div class="ratio-16x9">
+      <iframe id="vimeo-bg"
+        title="Vitrio – wideo tła"
+        frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture"
+        loading="lazy"
+        style="position:absolute;inset:0;width:100%;height:100%;border:0">
+      </iframe>
+    </div>
+  </div>
+</section>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const isSmallScreen = window.matchMedia("(max-width: 600px)").matches;
+  // ← USTAW SWOJE ID FILMÓW Z VIMEO
+  const VIMEO_DESKTOP = "1112538147";      // ID wersji desktop
+  const VIMEO_MOBILE  = "WPISZ_ID_MOBILE"; // ID wersji mobilnej (podmień)
 
-    if (isSmallScreen) {
-      const video = document.getElementById('hero-video');
-      if (video) {
-        video.innerHTML = `
-          <source src="/assets/video/onehome-namyslow-ul-olawska-mobil.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        `;
-        video.load();
-      }
-    }
-  });
+  // Parametry playera w trybie tła
+  const params = "background=1&autoplay=1&muted=1&loop=1&dnt=1&playsinline=1";
+
+  // Wybór filmu zależnie od szerokości ekranu
+  const isMobile = window.matchMedia("(max-width: 600px)").matches;
+  const videoId = isMobile ? VIMEO_MOBILE : VIMEO_DESKTOP;
+
+  // Wstrzyknięcie src do iframe
+  const iframe = document.getElementById("vimeo-bg");
+  iframe.src = `https://player.vimeo.com/video/${videoId}?${params}`;
 </script>
-</section>
+<script src="https://player.vimeo.com/api/player.js" defer></script>
 
 <section class="container section home-portfolio">
   <header class="flex">

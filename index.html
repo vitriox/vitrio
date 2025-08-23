@@ -105,35 +105,25 @@
       </div>
     </section>
 
-    <!-- WIDEO HERO (Vimeo, bez placeholdera) -->
+    <!-- WIDEO HERO (Vimeo) -->
     <section class="video-hero" aria-label="Ujęcie dronem">
       <div class="video-hero__pin">
         <div class="video-hero__media">
-          <iframe id="vimeo-bg"
+          <!-- BEZPOŚREDNI SRC -> zero czarnego ekranu -->
+          <iframe
+            id="vimeo-bg"
             title="Vitrio – wideo tła"
+            src="https://player.vimeo.com/video/1112538147?background=1&autoplay=1&muted=1&loop=1&dnt=1&playsinline=1"
             frameborder="0"
-            allow="autoplay; fullscreen; picture-in-picture"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen></iframe>
         </div>
       </div>
     </section>
 
     <script>
-      // ID filmów Vimeo
-      const VIMEO_DESKTOP = "1112538147";
-      let   VIMEO_MOBILE  = ""; // brak mobilnej – fallback
-      if (!VIMEO_MOBILE) VIMEO_MOBILE = VIMEO_DESKTOP;
-
-      // Autoodtwarzanie, wyciszenie, pętla, bez śledzenia
-      const params  = "background=1&autoplay=1&muted=1&loop=1&dnt=1&playsinline=1";
-      const isMobile = window.matchMedia("(max-width: 600px)").matches;
-      const videoId  = isMobile ? VIMEO_MOBILE : VIMEO_DESKTOP;
-
-      // Wstrzyknięcie src
-      const iframe = document.getElementById("vimeo-bg");
-      iframe.src = `https://player.vimeo.com/video/${videoId}?${params}`;
-
-      // Skalowanie przy scrollu (1 → 0.6)
+      // tylko efekt zmniejszania (iframe ma już src)
       document.addEventListener("scroll", () => {
         const scrolled = window.scrollY / window.innerHeight;
         const scale = Math.max(0.6, 1 - scrolled * 0.25);

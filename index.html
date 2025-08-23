@@ -120,10 +120,27 @@
   </div>
 </section>
 
+<!-- WIDEO HERO -->
+<section class="video-hero" aria-label="Ujęcie dronem">
+  <div class="video-hero__pin">
+    <div class="video-hero__media">
+      <!-- placeholder (czarne tło – znika po załadowaniu filmu) -->
+      <div class="video-hero__placeholder"></div>
+
+      <iframe id="vimeo-bg"
+        title="Vitrio – wideo tła"
+        frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture"
+        style="opacity:0;transition:opacity .6s ease"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
 <script>
   // ID filmów Vimeo
   const VIMEO_DESKTOP = "1112538147";   // Twoja wersja desktop
-  let   VIMEO_MOBILE  = "";             // na razie brak mobilnej
+  let   VIMEO_MOBILE  = "";             // jeszcze nie masz mobilnej
   if (!VIMEO_MOBILE) VIMEO_MOBILE = VIMEO_DESKTOP; // fallback
 
   // Parametry Vimeo: autoplay, brak dźwięku, pętla

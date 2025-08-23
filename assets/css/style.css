@@ -8,41 +8,64 @@
   --font-display:"Playfair Display", ui-serif, Georgia, serif;
   --font:"Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
 }
+
 *{box-sizing:border-box}
-html,body{margin:0;background:radial-gradient(1200px 600px at 10% -20%, #182034 0%, #0c0f14 60%);color:var(--text);font-family:var(--font);line-height:1.6}
-/*img,video{display:block;max-width:100%;height:auto}*/
+html,body{
+  margin:0;
+  background:radial-gradient(1200px 600px at 10% -20%, #182034 0%, #0c0f14 60%);
+  color:var(--text);
+  font-family:var(--font);
+  line-height:1.6;
+}
 a{color:inherit;text-decoration:none}
+
 .container{width:min(100%,var(--container));margin-inline:auto;padding-inline:16px}
 .section{padding:56px 0}
 .section-sm{padding:28px 0}
-.header{position:sticky;top:0;z-index:50;background:rgba(12,15,20,.55);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--line)}
+
+.header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(12,15,20,.55);
+  backdrop-filter:saturate(140%) blur(10px);
+  border-bottom:1px solid var(--line)
+}
 .header-inner{min-height:64px;display:flex;align-items:center;gap:16px}
 .nav{display:flex;gap:16px;margin-left:auto;align-items:center;flex-wrap:wrap}
-.nav a{opacity:.9;border-radius:999px;padding: 4px 3px}
+.nav a{opacity:.9;border-radius:999px;padding:4px 3px}
 .nav a[aria-current="page"], .nav a:hover{opacity:1;background:rgba(255,255,255,.06)}
+
 .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;background:#fff;color:#111;font-weight:700;border:0;cursor:pointer}
-.btn.secondary{background:transparent;color:var(--text);border:1px solid var(--line); padding: 8px 6px;}
+.btn.secondary{background:transparent;color:var(--text);border:1px solid var(--line); padding:8px 6px;}
 .btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
+
 .badge{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:6px 12px;color:var(--muted);font-size:.9rem}
 .card{background:linear-gradient(180deg,#161c2a,#101521);border:1px solid var(--line);border-radius:var(--radius-lg);padding:18px;box-shadow:var(--shadow)}
+
 .grid{display:grid;gap:16px}
 .cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
 .cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
 .cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}
 @media (max-width:1024px){.cols-4{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:680px){.cols-2,.cols-3,.cols-4{grid-template-columns:1fr}}
+
 .kpi{font-weight:800;font-size:clamp(1.4rem,1rem + 2vw,2rem)}
 .muted{color:var(--muted)}
+
 .footer{border-top:1px solid var(--line);background:rgba(16,22,33,.5)}
 .footer-grid{display:grid;gap:16px;grid-template-columns:1fr auto}
 .flex{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
 /* Corner brand pill */
-.corner-brand{position:fixed;inset:16px auto auto 16px;z-index:80;display:flex;align-items:center;gap:10px;
+.corner-brand{
+  position:fixed;inset:16px auto auto 16px;z-index:80;display:flex;align-items:center;gap:10px;
   padding:10px 12px;border-radius:999px;background:rgba(255,255,255,.06);backdrop-filter: blur(8px) saturate(140%);
-  border:1px solid rgba(255,255,255,.08);box-shadow:0 4px 20px rgba(0,0,0,.3)}
+  border:1px solid rgba(255,255,255,.08);box-shadow:0 4px 20px rgba(0,0,0,.3)
+}
 .corner-brand img{width:46px;height:auto}
-@media(max-width:640px){.corner-brand{inset:12px auto auto 12px;padding:8px 10px}.corner-brand img{width:40px}}
+@media(max-width:640px){
+  .corner-brand{inset:12px auto auto 12px;padding:8px 10px}
+  .corner-brand img{width:40px}
+}
 
 /* Hero headline */
 .hero{min-height:52svh;display:grid;place-items:center;text-align:center}
@@ -54,89 +77,33 @@ a{color:inherit;text-decoration:none}
 .services .card{transition:transform .3s ease, box-shadow .3s ease}
 .services .card:hover{transform:translateY(-2px);box-shadow:0 18px 50px rgba(0,0,0,.35)}
 
-/* Video shrink section */
-.video-hero {
-  height: 200vh; /* Keeps the scroll effect */
-  position: relative;
-}
-
-.video-hero__pin {
-  position: sticky;
-  top: 0;
-  height: 100dvh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px;
-  background: black;
-  z-index: 0;
-}
-
-.video-hero video {
-  width: min(100vw, 100%);
-  max-height: 100%;
-  border-radius: 16px;
-  box-shadow: var(--shadow);
-  transform-origin: top center;
-  will-change: transform;
-  object-fit: contain;
-}
-
-@media (max-width: 600px) {
-  .video-hero{position:relative;height:200vh;}
-  .video-hero__pin{
-    position:sticky;
-    top: 0;
-    height: 100vsh;
-    display:grid;
-    place-items:center;
-    padding: 0px;
-  }
-}
-
-/* Filtry */
-.filters{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 16px}
-.filters .btn{background:transparent;border:1px solid var(--line);color:var(--text)}
-.filters .btn.active{background:#fff;color:#000}
-
 /* Progress bar */
 .progress{position:fixed;inset:0 0 auto 0;height:3px;background:#fff3;transform-origin:0 50%;z-index:100}
 
-/* Karty ofertowe (drobne ulepszenia) */
+/* Karty ofertowe */
 .card{background:#111;border-radius:12px;padding:20px;color:#fff;display:block;transition:transform .25s ease, box-shadow .25s ease;height:100%}
 .card h3{margin-top:0;font-size:1.25rem}
 .card p{font-size:.95rem;line-height:1.4}
 .card:hover{transform:scale(.97);box-shadow:0 10px 20px rgba(0,0,0,.4)}
 .card--link{color:inherit}
 
-/* Siatka responsywna */
+/* Siatka responsywna (dodatkowe) */
 .grid{display:grid;gap:20px}
 .mobile{display:none;}
 .grid.cols-3{grid-template-columns:repeat(3,1fr)}
 @media (max-width:900px){.grid.cols-3{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:600px){.grid.cols-3{grid-template-columns:1fr}}
+
 @media (max-width:600px){
-  /*.pc{
-    display:none
-  }
-  .mobile{display:block;}*/
-  .vitrio{
-    height: 75px;
-  }
-  .header{
-    position:relative
-  }
+  .vitrio{height:75px}
+  .header{position:relative}
 }
-.vitrio,.vitrio_nb{
-  transition: 0.15s ease-in-out;
-}
-.vitrio:hover{
-  height:96px;
-  filter:brightness(0.5)
-}
-.vitrio,.vitrio_nb{margin-top:20px;margin-bottom:20px}
-.vitrio,.vitrio_nb{height:84px;}
+
+.vitrio,.vitrio_nb{transition:.15s ease-in-out}
+.vitrio:hover{height:96px;filter:brightness(0.5)}
+.vitrio,.vitrio_nb{margin-top:20px;margin-bottom:20px;height:84px}
 .vitrio_nb{border-radius:12px}
+
 .section-head h1{margin-bottom:.25rem}
 .section-head p{max-width:70ch}
 
@@ -158,540 +125,98 @@ a{color:inherit;text-decoration:none}
 .home-card .card-overlay:hover{cursor:pointer}
 .home-card h3 a,.home-card .btn{position:relative;z-index:2}
 
-/* --- USUNIĘTO wszystkie warianty .vr-grid oraz duplikaty .ratio-16x9 --- */
-
-/* Case studies – szerokie, niskie kafle */
-.cs-tiles{display:grid;grid-template-columns:1fr;gap:16px}
-.cs-tile{border:1px solid rgba(255,255,255,.08);background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.02));
-  border-radius:14px;padding:16px 18px;box-shadow:0 6px 24px rgba(0,0,0,.22);transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease}
-.cs-tile:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(0,0,0,.28);border-color:rgba(255,255,255,.12)}
-.cs-tile__header{display:flex;align-items:baseline;gap:10px;margin-bottom:8px}
-.cs-tile h2{font-size:clamp(18px,2.2vw,22px);line-height:1.2;margin:0}
-.badge{display:inline-block;font-size:12px;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.08);color:#fff;white-space:nowrap}
-.cs-kpis{display:flex;flex-wrap:wrap;gap:12px 18px;margin:10px 0 0;padding:0;list-style:none}
-.cs-kpis li{font-size:14px;color:var(--muted,#9aa1ac)}
-.cs-links{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
-.cs-tile .btn{padding:8px 14px}
-
-/* Stats – prostokątne kafle */
-.stats-tiles{display:flex;flex-direction:column;gap:18px;margin-top:24px}
-.stats-tile{border:1px solid rgba(255,255,255,.10);background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.02));
-  border-radius:14px;padding:18px 20px;box-shadow:0 6px 22px rgba(0,0,0,.22);transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease}
-.stats-tile:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(0,0,0,.28);border-color:rgba(255,255,255,.14)}
-.stats-tile h2{font-size:clamp(18px,2.1vw,22px);line-height:1.25;margin:0 0 8px}
-.stats-tile p{margin:0;line-height:1.55;font-size:15px}
-.stats-tile p + p{margin-top:10px}
-.stats-tile .muted{color:var(--muted,#9aa1ac)}
-.stats-tile .source{display:block;margin-top:8px;font-size:12px;color:var(--muted,#9aa1ac)}
-@media(min-width:960px){.stats-tile{padding:20px 24px}}
-
-/* === Docelowy układ VR: dwie stałe kolumny === */
-.vr-columns{display:flex;gap:16px;align-items:flex-start}
-.vr-col{flex:1 1 0;min-width:0}
-.vr-col .card{margin-bottom:16px}
-
-/* Zabezpieczenia przed „masonry/columns” */
-.vr-columns, .vr-columns *{break-inside:avoid !important;column-span:all !important}
-
-/* Jedyna wersja ratio 16:9 */
-.ratio-16x9{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:12px}
-.ratio-16x9 iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
-
-/* Odstępy pomocnicze */
-.mb-12{margin-bottom:12px}
-.mt-12{margin-top:12px}
-
-/* Mobile: jedna kolumna */
-@media (max-width:1024px){.vr-columns{flex-direction:column}}
-
-
-/* Portfolio: lekkie masonry tylko dla sekcji z obrazkami */
-.portfolio-masonry{
-  columns: 3 320px;         /* 3 kolumny, min-szerokość „kafelka” 320px */
-  column-gap: 12px;
-}
-.portfolio-masonry .item{
-  break-inside: avoid;
-  margin: 0 0 12px;
-}
-.portfolio-masonry img{
-  width: 100%;
-  display: block;
-  border-radius: 12px;
-}
-
-/* Responsywnie trochę ciaśniej na tabletach/telefonach (kolumny dobiera przeglądarka) */
-@media (max-width: 900px){
-  .portfolio-masonry{ columns: 2 280px; }
-}
-@media (max-width: 600px){
-  .portfolio-masonry{ columns: 1 260px; }
-}
-
-/* 1) Globalnie: zmniejsz kafle masonry (zdjęcia) — dotyczy np. strony głównej */
-.portfolio-masonry{
-  columns: 3 260px;   /* było 320px — mniejsze kafle */
-  column-gap: 12px;
-}
-.portfolio-masonry .item{
-  break-inside: avoid;
-  margin: 0 0 12px;
-}
-.portfolio-masonry img{
-  width: 100%;
-  display: block;
-  border-radius: 12px;
-}
-
-/* responsywne dopasowanie */
-@media (max-width: 900px){
-  .portfolio-masonry{ columns: 2 240px; }
-}
-@media (max-width: 600px){
-  .portfolio-masonry{ columns: 1 100%; }
-}
-
-/* 2) Portfolio → sekcja DRONY: jeszcze mniejsze kafle + poprawna prezentacja <video> */
-.portfolio-section[data-section="dron"] .portfolio-masonry{
-  columns: 3 220px;   /* ciaśniej niż globalnie, żeby video były wyraźnie mniejsze */
-  column-gap: 12px;
-}
-.portfolio-section[data-section="dron"] .portfolio-masonry .item{
-  break-inside: avoid;
-  margin: 0 0 12px;
-}
-.portfolio-section[data-section="dron"] .portfolio-masonry video{
-  width: 100%;
-  height: auto;       /* zachowaj proporcje 16:9 */
-  display: block;
-  border-radius: 12px;
-  background: #000;   /* brak białych pasów przy ładowaniu */
-}
-
-
-/* Zmniejszenie obrazów na stronie głównej */
-.home-card img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
-  display: block;
-  /* Nowy limit szerokości – możesz dopasować do gustu */
-  max-height: 260px; /* np. taki limit wysokości jak było wcześniej */
-  object-fit: cover;
-}
-
-/* Jeżeli to są też elementy w gridzie, pilnujemy żeby kafle były niższe */
-.home-card {
-  overflow: hidden;
-}
-
-.home-card .ratio-16x9 {
-  max-height: 260px; /* dopasuj do poprzedniego wyglądu */
-}
-
-
-/* ==== HOME: sekcja podglądu portfolio ==== */
+/* ==== HOME: podgląd portfolio ==== */
 .home-portfolio .teaser-grid{
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0,1fr));
-  gap: 12px;
+  display:grid;
+  grid-template-columns:repeat(3, minmax(0,1fr));
+  gap:12px;
 }
+@media (max-width:980px){.home-portfolio .teaser-grid{grid-template-columns:repeat(2, minmax(0,1fr))}}
+@media (max-width:620px){.home-portfolio .teaser-grid{grid-template-columns:1fr}}
 
-@media (max-width: 980px){
-  .home-portfolio .teaser-grid{ grid-template-columns: repeat(2, minmax(0,1fr)); }
-}
-@media (max-width: 620px){
-  .home-portfolio .teaser-grid{ grid-template-columns: 1fr; }
-}
-
-/* Kafle/miniatury – równa wysokość, bez „hero” */
 .home-portfolio .teaser-card{
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 10px;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:10px;
 }
-
 .home-portfolio .teaser-media{
-  position: relative;
-  width: 100%;
-  height: 220px;          /* <- klucz: docelowa wysokość miniatury */
-  overflow: hidden;
-  border-radius: 10px;
-  margin-bottom: 10px;
+  position:relative;width:100%;height:220px;overflow:hidden;border-radius:10px;margin-bottom:10px;
 }
 .home-portfolio .teaser-media img,
 .home-portfolio .teaser-media iframe,
 .home-portfolio .teaser-media video{
-  position: absolute; inset: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
-  border: 0;
-  display: block;
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0;display:block;
 }
+.home-portfolio .teaser-card h3{font-size:1rem;margin:6px 0 0}
+.home-portfolio .teaser-card p{margin:4px 0 0;color:var(--muted);font-size:.92rem}
 
-/* Nagłówki/teksty pod miniaturą (opcjonalnie) */
-.home-portfolio .teaser-card h3{
-  font-size: 1rem;
-  margin: 6px 0 0;
-}
-.home-portfolio .teaser-card p{
-  margin: 4px 0 0;
-  color: var(--muted);
-  font-size: .92rem;
-}
+/* ==== Portfolio masonry (pojedyncza, spójna wersja) ==== */
+.portfolio-masonry{columns:3 260px;column-gap:12px}
+.portfolio-masonry .item{break-inside:avoid;margin:0 0 12px}
+.portfolio-masonry img{width:100%;display:block;border-radius:12px}
+@media (max-width:900px){.portfolio-masonry{columns:2 240px}}
+@media (max-width:600px){.portfolio-masonry{columns:1 100%}}
 
-/* O nas – delikatne ujednolicenie wyglądu kart */
-.about-intro .card p + p { margin-top: .5rem; }
-.about-cards .card h3 { margin-bottom: .35rem; }
-.about-cards .card p { margin-bottom: .5rem; }
-.about-team .card h3 { margin-bottom: .35rem; }
-.about-team .list li { margin: .3rem 0; }
-
-#scrollToTopBtn {display: none;position: fixed;bottom: 20px;right: 20px;z-index: 999;background-color: green;color: white;border: none;padding: 15px;border-radius: 50%;cursor: pointer;font-size: 18px;transition: opacity 0.3s ease;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);}
-
-#scrollToTopBtn:hover {background-color: #0c0;}
-
-.karta-wyslij {
-  margin-top: 15px;
-  flex:auto;
-  position: relative;
-}
-.karta-projekt {
-  height: 280px;
-  width: 100%
-}
-.opis-label {
-  margin-top: 20px;
-}
-.karta-email {
-  width: 100%;
-  height: 20px;
-}
-.telefon-label {
-  margin-top: 0px;
-}
-.karta-telefon {
-  height: 20px;
-  width: 100%
-}
-
-.contact-section {
-  margin-top: -80px;
-}
-
-
-
-/* ===== WIDEO HERO ===== */
-.video-hero {
-  height: 200vh; /* sekcja dłuższa, żeby działał efekt zmniejszania */
-  position: relative;
-}
-
-.video-hero__pin {
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 0;
-}
-
-.video-hero__media {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transform: scale(var(--scale, 1));
-  transform-origin: top center;
-  transition: transform 0.2s ease-out;
-}
-
-.video-hero__media iframe {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  border-radius: 16px;
-  box-shadow: var(--shadow);
-  object-fit: cover;
-}
-
-/* Placeholder (czarne tło zanim film się pojawi) */
-.video-hero__placeholder {
-  position: absolute;
-  inset: 0;
-  background: #000;
-  border-radius: 16px;
-  transition: opacity 0.4s ease;
-  z-index: 1;
-}
-
-/* ===== WIDEO HERO – poprawka na białe pasy i mniejszą przerwę ===== */
-
-/* krótsza sekcja, żeby nie było wielkiej dziury nad „Portfolio” */
+/* ===== WIDEO HERO (Vimeo – bez białych pasków) ===== */
 .video-hero{
-  height: 160vh;          /* było 200vh */
+  height:150vh;            /* krótsza sekcja → mniejsza przerwa nad „Portfolio” */
+  position:relative;
 }
-@media (max-width: 900px){
-  .video-hero{ height: 140vh; }
+@media (max-width:900px){
+  .video-hero{height:130vh}
 }
-
 .video-hero__pin{
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  display: grid;
-  place-items: center;
-  z-index: 0;
-}
-
-.video-hero__media{
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transform: scale(var(--scale,1));
-  transform-origin: top center;
-  transition: transform .2s ease-out;
-  background:#000;        /* tło pod playerem */
-  overflow:hidden;        /* utnie nadmiar (brak pasów) */
-  border-radius: 16px;    /* jeśli chcesz – pasuje do reszty UI */
-  box-shadow: var(--shadow);
-}
-
-/* „cover” dla iframa 16:9 – zawsze wypełnia kontener bez pasków */
-.video-hero__media iframe{
-  position:absolute;
-  top:50%; left:50%;
-  transform:translate(-50%,-50%);
-  border:0;
-
-  /* magia: wybierz większy wymiar tak, aby przykryć kontener */
-  width:  max(100vw, 177.78vh);   /* 16/9 = 1.7778 */
-  height: max(56.25vw, 100vh);    /* 9/16 = 0.5625 */
-
-  /* jeżeli nie chcesz zaokrągleń na wideo – odkomentuj poniższe
-  border-radius: 16px;
-  */
-}
-
-/* placeholder zanika po załadowaniu */
-.video-hero__placeholder{
-  position:absolute; inset:0;
+  position:sticky;top:0;
+  height:100vh;
+  display:grid;place-items:center;
+  z-index:0;
+  padding:0;               /* zero paddingu → brak „ramek” */
   background:#000;
-  transition:opacity .4s ease;
-  z-index:1;
+}
+.video-hero__media{
+  position:relative;
+  width:100%;height:100%;
+  transform:scale(var(--scale,1));
+  transform-origin:top center;
+  transition:transform .2s ease-out;
+  background:#000;
+  overflow:hidden;         /* ukrywa nadmiar filmu, żadnych pasów */
+}
+.video-hero__media iframe{
+  position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  border:0;display:block;
+
+  /* Wypełnienie „cover” przy różnych proporcjach okna */
+  width:max(100vw, 177.78vh);   /* 16/9 = 1.7778 */
+  height:max(56.25vw, 100vh);   /* 9/16 = 0.5625 */
+}
+.video-hero__placeholder{
+  position:absolute;inset:0;background:#000;transition:opacity .4s ease;z-index:1;
 }
 
-<!doctype html>
-<html lang="pl" data-theme="dark">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Vitrio – Wirtualnie Blisko</title>
-  <meta name="description" content="Vitrio: wizualizacje 3D, wirtualne spacery 360° (Matterport/Kuula), ujęcia dronem. Slogan: Wirtualnie Blisko." />
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-  <script src="/assets/js/main.js"></script>
-  <div class="progress" aria-hidden="true"></div>
+/* drobne zacieśnienie nad następną sekcją */
+.video-hero + .section{padding-top:32px}
 
-  <header class="header" role="banner">
-    <div class="container header-inner">
-      <a href="/" class="logo-link" aria-label="Vitrio – strona główna">
-        <img src="/assets/img/logo-vitrio.svg" alt="Vitrio" decoding="async" class="vitrio" />
-      </a>
-      <nav id="menu" class="nav" aria-label="Główna">
-        <a href="/oferta/" class="pc">Oferta</a>
-        <a href="/oferta/" class="mobile"><i class="fa-regular fa-envelope"></i></a>
-        <a href="/portfolio/" class="pc">Portfolio</a>
-        <a href="/case-studies/" class="pc">Case studies</a>
-        <a href="/proces/" class="pc">Proces</a>
-        <a href="/cennik/" class="pc">Cennik</a>
-        <a href="/o-nas/" class="pc">O nas</a>
-        <a href="/blog/" class="pc">Blog</a>
-        <a href="/kontakt/" class="btn secondary pc">Kontakt</a>
-      </nav>
-    </div>
-  </header>
+/* Filtry */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 16px}
+.filters .btn{background:transparent;border:1px solid var(--line);color:var(--text)}
+.filters .btn.active{background:#fff;color:#000}
 
-  <main id="main">
+/* Przycisk „do góry” */
+#scrollToTopBtn{
+  display:none;position:fixed;bottom:20px;right:20px;z-index:999;
+  background-color:green;color:#fff;border:none;padding:15px;border-radius:50%;cursor:pointer;
+  font-size:18px;transition:opacity .3s ease;box-shadow:0 4px 8px rgba(0,0,0,.2);
+}
+#scrollToTopBtn:hover{background-color:#0c0}
 
-    <section class="hero container" aria-labelledby="h-slogan">
-      <div>
-        <span class="badge">Wirtualnie Blisko</span>
-        <h1 id="h-slogan">Wizualizacje 3D i wirtualne spacery, które sprzedają nieruchomości szybciej.</h1>
-        <p class="muted">Łączymy fotorealistyczne rendery, spacery 360° (Matterport/Kuula), ujęcia dronem (klasyczny + FPV) oraz przejrzyste rzuty 3D. Skupiamy się na jakości, która realnie zwiększa liczbę zapytań.</p>
-        <div style="display:flex;gap:8px;justify-content:center;margin-top:10px">
-          <a class="btn" href="kontakt/">Umów konsultację</a>
-          <a class="btn secondary" href="portfolio/">Zobacz portfolio</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section container services" aria-labelledby="h-services">
-      <h2 id="h-services">Co robimy</h2>
-      <div class="grid cols-4">
-        <article class="card home-card">
-          <a class="card-overlay" href="oferta/wirtualne-spacery/" aria-label="Zobacz ofertę: Wirtualne Spacery"></a>
-          <div class="icon" aria-hidden="true">🖼️</div>
-          <h3>Wirtualne Spacery</h3>
-          <p class="muted">Interaktywne wycieczki 360° – Matterport oraz Kuula. Idealne na stronę, portale ogłoszeniowe i social media.</p>
-          <p><a class="btn ghost" href="oferta/wirtualne-spacery/">Oferta</a></p>
-        </article>
-
-        <article class="card home-card">
-          <a class="card-overlay" href="oferta/wizualizacje/" aria-label="Zobacz ofertę: Wizualizacje 3D"></a>
-          <div class="icon" aria-hidden="true">🏠</div>
-          <h3>Wizualizacje 3D</h3>
-          <p class="muted">Fotorealistyczne ujęcia zewnętrzne i wnętrza. Światło, materiały i kompozycja nastawione na konwersję.</p>
-          <p><a class="btn ghost" href="oferta/wizualizacje/">Oferta</a></p>
-        </article>
-
-        <article class="card home-card">
-          <a class="card-overlay" href="oferta/dron/" aria-label="Zobacz ofertę: Dron / FPV"></a>
-          <div class="icon" aria-hidden="true">🚁</div>
-          <h3>Dron / FPV</h3>
-          <p class="muted">Dynamiczne ujęcia i kontekst lokalizacji. Storytelling w ruchu: klasyczny dron oraz ujęcia FPV.</p>
-          <p><a class="btn ghost" href="oferta/dron/">Oferta</a></p>
-        </article>
-
-        <article class="card home-card">
-          <a class="card-overlay" href="oferta/rzuty-3d/" aria-label="Zobacz ofertę: Rzuty 3D"></a>
-          <div class="icon" aria-hidden="true">📐</div>
-          <h3>Rzuty 3D</h3>
-          <p class="muted">Przejrzyste rzuty i układy funkcjonalne. Pomagają klientom zrozumieć skalę i możliwości aranżacyjne.</p>
-          <p><a class="btn ghost" href="oferta/rzuty-3d/">Oferta</a></p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section container" aria-labelledby="h-why">
-      <h2 id="h-why">Dlaczego Vitrio?</h2>
-      <div class="grid cols-3">
-        <article class="card"><div class="kpi">24h</div><p class="muted">Wycena do następnego dnia</p></article>
-        <article class="card"><div class="kpi">98%</div><p class="muted">Klientów poleca nasze materiały</p></article>
-        <article class="card"><div class="kpi">200+</div><p class="muted">Zrealizowanych ujęć i spacerów</p></article>
-      </div>
-    </section>
-
-    <section class="section container" aria-labelledby="h-vr">
-      <h2 id="h-vr">Wirtualny spacer – integracja Kuula</h2>
-      <div class="card">
-        <div class="ratio-16x9">
-          <iframe width="100%" height="100%" frameborder="0"
-            allow="xr-spatial-tracking; gyroscope; accelerometer" allowfullscreen scrolling="no"
-            src="https://kuula.co/share/collection/71kNy?logo=-1&info=0&fs=1&vr=1&sd=1&thumbs=1&inst=pl"></iframe>
-        </div>
-        <p class="muted" style="margin-top:10px">Przykładowe osadzenie spaceru 360° (Kuula). Integrujemy również Matterport dla najwyższej jakości.</p>
-      </div>
-    </section>
-
-    <!-- WIDEO HERO (Vimeo) -->
-    <section class="video-hero" aria-label="Ujęcie dronem">
-      <div class="video-hero__pin">
-        <div class="video-hero__media">
-          <!-- BEZPOŚREDNI SRC -> zero czarnego ekranu -->
-          <iframe
-            id="vimeo-bg"
-            title="Vitrio – wideo tła"
-            src="https://player.vimeo.com/video/1112538147?background=1&autoplay=1&muted=1&loop=1&dnt=1&playsinline=1"
-            frameborder="0"
-            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen></iframe>
-        </div>
-      </div>
-    </section>
-
-    <script>
-      // tylko efekt zmniejszania (iframe ma już src)
-      document.addEventListener("scroll", () => {
-        const scrolled = window.scrollY / window.innerHeight;
-        const scale = Math.max(0.6, 1 - scrolled * 0.25);
-        document.querySelector(".video-hero__media")
-          .style.setProperty("--scale", scale);
-      });
-    </script>
-    <script src="https://player.vimeo.com/api/player.js" defer></script>
-
-    <section class="container section home-portfolio">
-      <header class="flex">
-        <h2>Portfolio</h2>
-        <a class="btn ghost" href="portfolio/">Pełne portfolio →</a>
-      </header>
-
-      <div class="filters">
-        <a class="btn active" href="portfolio/#all">Wszystko</a>
-        <a class="btn" href="portfolio/#viz">Wizualizacje</a>
-        <a class="btn" href="portfolio/#vr">Wirtualne Spacery</a>
-        <a class="btn" href="portfolio/#dron">Drony</a>
-        <a class="btn" href="portfolio/#foto">Fotografia</a>
-        <a class="btn" href="portfolio/#rzuty-3d">Rzuty 3D</a>
-      </div>
-
-      <div class="teaser-grid">
-        <article class="teaser-card">
-          <div class="teaser-media">
-            <img src="assets/img/teaser-1.jpg" alt="">
-          </div>
-          <h3>Wizualizacja osiedla</h3>
-          <p class="muted">Zobacz więcej w portfolio</p>
-        </article>
-
-        <article class="teaser-card">
-          <div class="teaser-media">
-            <iframe src="https://my.matterport.com/show/?m=qYMZDQbDN3s" allowfullscreen loading="lazy"></iframe>
-          </div>
-          <h3>Wirtualny spacer: Wrocław</h3>
-          <p class="muted">Case z szybką sprzedażą</p>
-        </article>
-
-        <article class="teaser-card">
-          <div class="teaser-media">
-            <img src="assets/img/teaser-2.jpg" alt="">
-          </div>
-          <h3>Fotografia wnętrz</h3>
-          <p class="muted">Pakiet pod portale ogłoszeniowe</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section container" aria-labelledby="h-cta">
-      <h2 id="h-cta">Wirtualnie Blisko Twoich klientów</h2>
-      <p class="muted">Prześlij rzut/projekt lub link do oferty – w 24h wrócimy z propozycją pakietu i terminem realizacji.</p>
-      <p><a class="btn" href="kontakt/">Umów wycenę</a></p>
-    </section>
-
-  </main>
-
-  <footer class="footer" role="contentinfo">
-    <div class="container footer-grid">
-      <div>
-        <img src="assets/img/logo-vitrio.svg" alt="Vitrio" class="vitrio_nb" decoding="async" />
-        <p class="muted">Wizualizacje 3D, VR 360°, dron | „Wirtualnie Blisko”.</p>
-        <small>© <span id="y"></span> Vitrio</small>
-      </div>
-      <nav aria-label="Stopka">
-        <strong>Nawigacja</strong>
-        <ul>
-          <li><a href="oferta/">Oferta</a></li>
-          <li><a href="portfolio/">Portfolio</a></li>
-          <li><a href="kontakt/">Kontakt</a></li>
-          <li><a href="polityka-prywatnosci/">Polityka prywatności</a></li>
-        </ul>
-      </nav>
-    </div>
-  </footer>
-
-  <button id="scrollToTopBtn" aria-label="Scroll to top"><s>↑</s></button>
-
-  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
-  <script src="assets/js/components.js" defer></script>
-  <script src="assets/js/scroll.js"></script>
-</body>
-</html>
+/* Formularz kontaktowy – kosmetyka */
+.karta-wyslij{margin-top:15px;flex:auto;position:relative}
+.karta-projekt{height:280px;width:100%}
+.opis-label{margin-top:20px}
+.karta-email{width:100%;height:20px}
+.telefon-label{margin-top:0}
+.karta-telefon{height:20px;width:100%}
+.contact-section{margin-top:-80px}

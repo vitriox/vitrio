@@ -120,47 +120,35 @@
   </div>
 </section>
 
-<!-- WIDEO HERO -->
-<section class="video-hero" aria-label="Ujęcie dronem">
-  <div class="video-hero__pin">
-    <div class="video-hero__media">
-      <!-- placeholder (czarne tło, znika po załadowaniu wideo) -->
-      <div class="video-hero__placeholder"></div>
-
-      <iframe id="vimeo-bg"
-        title="Vitrio – wideo tła"
-        frameborder="0"
-        allow="autoplay; fullscreen; picture-in-picture"
-        allowfullscreen
-        loading="lazy"></iframe>
-    </div>
-  </div>
-</section>
-
 <script>
-  // ← Podmień ID filmów
-  const VIMEO_DESKTOP = "1112538147";      // ID wersji desktop
-  const VIMEO_MOBILE  = "WPISZ_ID_MOBILE"; // ID wersji mobilnej (wstaw jak będziesz miał)
+  // ID filmów Vimeo
+  const VIMEO_DESKTOP = "1112538147";   // Twoja wersja desktop
+  let   VIMEO_MOBILE  = "";             // na razie brak mobilnej
+  if (!VIMEO_MOBILE) VIMEO_MOBILE = VIMEO_DESKTOP; // fallback
 
+  // Parametry Vimeo: autoplay, brak dźwięku, pętla
   const params = "background=1&autoplay=1&muted=1&loop=1&dnt=1&playsinline=1";
+
   const isMobile = window.matchMedia("(max-width: 600px)").matches;
-  const videoId = isMobile ? VIMEO_MOBILE : VIMEO_DESKTOP;
+  const videoId  = isMobile ? VIMEO_MOBILE : VIMEO_DESKTOP;
 
   const iframe = document.getElementById("vimeo-bg");
+  iframe.removeAttribute('loading'); // wyłącz lazy, żeby nie było białego błysku
   iframe.src = `https://player.vimeo.com/video/${videoId}?${params}`;
 
-  // Fade-in po załadowaniu
+  // fade-in po załadowaniu
   iframe.addEventListener("load", () => {
     iframe.style.opacity = "1";
     const ph = document.querySelector(".video-hero__placeholder");
-    if(ph) ph.style.opacity = "0";
+    if (ph) ph.style.opacity = "0";
   });
 
-  // Skalowanie przy scrollu
+  // skalowanie przy scrollu
   document.addEventListener("scroll", () => {
     const scrolled = window.scrollY / window.innerHeight;
     const scale = Math.max(0.6, 1 - scrolled * 0.25);
-    document.querySelector(".video-hero__media").style.setProperty("--scale", scale);
+    document.querySelector(".video-hero__media")
+      .style.setProperty("--scale", scale);
   });
 </script>
 <script src="https://player.vimeo.com/api/player.js" defer></script>
